@@ -12,12 +12,11 @@ pipeline {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'server', keyFileVariable: 'SSH_KEY')]) {
                         sh '''
-                          ssh -i $SSH_KEY -o StrictHostKeyChecking=no ubuntu@3.91.27.71 "hostname -i"
-                          scp -i $SSH_KEY -o StrictHostKeyChecking=no index.html ubuntu@3.91.27.71:/usr/share/ngnix/html
+                          sh 'scp -i "${SSH_KEY}" index.html ubuntu@3.91.27.71:/usr/share/nginx/html/index.html'
+                          sh 'ssh -1 "${SSH_KEY}" -o StrictHostKeyChecking=no ubuntu@3.91.27.71 "systemctl restart nginx.service
 
                         '''
                 }
-                echo 'Connecting to the Web Server...'
             }
         }
     }
