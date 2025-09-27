@@ -12,8 +12,8 @@ pipeline {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'application', keyFileVariable: 'SSH_KEY')]) {
                         sh '''
-                          ssh -i $SSH_KEY -o StrictHostKeyChecking=no ubuntu@3.91.27.71 "hostname -i"
-                          scp -i $SSH_KEY -o StrictHostKeyChecking=no index.html ubuntu@3.91.27.71:/usr/share/ngnix/html
+                          ssh -i $server -o StrictHostKeyChecking=no ubuntu@3.91.27.71 "hostname -i"
+                          scp -i $server -o StrictHostKeyChecking=no index.html ubuntu@3.91.27.71:/usr/share/ngnix/html
 
                         '''
                 }
