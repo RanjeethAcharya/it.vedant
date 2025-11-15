@@ -1,1 +1,137 @@
-hello devu manasu
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample Webpage with Fading Background</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Apply a full-page background with fading effect */
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Styling the container */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #FFD700;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        /* Make the webpage responsive */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Sample Webpage</h1>
+            <p>This is a simple webpage with a fading background effect.</p>
+        </header>
+        <main>
+            <section>
+                <h2>About This Page</h2>
+                <p>This page demonstrates a basic, responsive webpage with a background color that fades from dark to light.</p>
+            </section>
+            <section>
+                <h2>Responsive Design</h2>
+                <p>The page layout adjusts to different screen sizes and devices, ensuring a great user experience on any device.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 My Webpage</p>
+        </footer>
+    </div>
+</body>
+</html>
