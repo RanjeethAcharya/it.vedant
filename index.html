@@ -1,137 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sample Webpage with Fading Background</title>
-    <style>
-        /* Reset default margin and padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Shop</title>
 
-        /* Apply a full-page background with fading effect */
-        body {
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
 
-        /* Styling the container */
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 8px;
-        }
+    body {
+        background: #b69a7c; 
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+    }
 
-        /* Header Styling */
-        header {
+    .hero-wrapper {
+        width: 90%;
+        max-width: 1200px;
+        background: #2d221b;
+        border-radius: 10px;
+        padding: 40px 60px;
+        color: white;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        background-position: center;
+    }
+
+    /* Navigation */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #d6b892;
+        letter-spacing: 1px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 30px;
+        font-size: 16px;
+    }
+
+    .nav-links a:hover {
+        color: #d6b892;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 60px;
+        line-height: 1.1;
+        font-weight: 700;
+    }
+
+    .hero-text h1 span {
+        color: #d6b892;
+    }
+
+    .hero-text p {
+        margin: 20px 0;
+        font-size: 17px;
+        color: #dddddd;
+        max-width: 450px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        background: #d6b892;
+        border: none;
+        color: #2d221b;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 15px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        background: #c6a67a;
+    }
+
+    .hero-img img {
+        width: 380px;
+        max-width: 100%;
+        filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.7));
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 850px) {
+        .hero {
+            flex-direction: column;
             text-align: center;
-            margin-bottom: 20px;
         }
 
-        header h1 {
-            font-size: 36px;
-            color: #FFD700;
+        .hero-text p {
+            margin: 10px auto;
         }
+    }
 
-        header p {
-            font-size: 18px;
-            color: #fff;
-        }
+</style>
 
-        /* Main Content Styling */
-        main {
-            padding: 20px;
-        }
-
-        h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #FFD700;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        /* Footer Styling */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            border-radius: 4px;
-        }
-
-        /* Make the webpage responsive */
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            .container {
-                padding: 15px;
-            }
-
-            header h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 24px;
-            }
-
-            footer {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 24px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Welcome to My Sample Webpage</h1>
-            <p>This is a simple webpage with a fading background effect.</p>
-        </header>
-        <main>
-            <section>
-                <h2>About This Page</h2>
-                <p>This page demonstrates a basic, responsive webpage with a background color that fades from dark to light.</p>
-            </section>
-            <section>
-                <h2>Responsive Design</h2>
-                <p>The page layout adjusts to different screen sizes and devices, ensuring a great user experience on any device.</p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 My Webpage</p>
-        </footer>
+
+<div class="hero-wrapper">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">COFFEE SHOP</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
+            <a href="#">Contact</a>
+        </div>
     </div>
+
+    <!-- HERO CONTENT -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>FRESH <span>COFFEE</span><br>IN THE <span>MORNING</span></h1>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Vel non laborum modi culpa pariatur cupiditate.
+            </p>
+
+            <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <div class="hero-img">
+            <img src="/mnt/data/maxresdefault-1756940045.jpg" alt="Coffee Cup">
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
